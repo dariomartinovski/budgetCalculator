@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body{
+    min-height: 100vh;
+    background: linear-gradient(135deg,rgba(46,85,111,1), rgba(147,224,249,1));
+    font-family: 'Roboto Slab', serif;
+}
+header{
+    width: 100%;
+    min-height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(250,250,250,0.5);
+    backdrop-filter: blur(0.3rem);
+}
+header>h1{
+    font-size: 1.5rem;
+}
+.budgetApp{
+    margin: 2rem 20vw;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+}
+.inputBoxes{
+    display: grid;
+    grid-template-columns: 61% 21% 10%;
+    justify-content: space-between;
+    gap: 1rem;
+}
+label{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    height: 1.5rem;
+}
+.addBtn, .filter select{
+    font-family: 'Roboto Slab', serif;
+    height: 1.8rem;
+    align-self: flex-end;
+    padding: 0.1rem;
+    border: 0.125rem solid white;
+    border-radius: 0.5rem;
+    color: white;
+    background-color: transparent;
+    transition: all 200ms ease-in-out;
+}
+.addBtn:hover{
+    background-color: white;
+    color: black;
+}
+.filter{
+    grid-column: 1/5;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.filter select{
+    margin: 0 1.35rem 0 1rem;
+    min-width: 10%;
+}
+.filter select option{
+    color: black;
+}
+.line:first-child{
+    margin-top: 2.5rem;
+}
+.line{
+    margin-top: 1rem;
+    min-height: 2rem;
+    border: 2px solid white;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+.line>p{
+    display: inline-block;
+    margin-left: 1rem;
+}
+.line span:first-of-type{
+    border-right: 1px solid white;
+    margin-right: 0.5rem;
+    padding-right: 0.5rem;
+}
+.buttons{
+    margin-right: 1rem;
+}
+.line .buttons button{
+    margin: 0.5rem 0.2rem;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.1rem 0.5rem;
+}
+.buttons img{
+    height: 1.2rem;
+}
+.total{
+    font-size: 0.8rem;
+    margin-top: 2.5rem;
+    text-align: center;
+}
+@media only screen and (max-width: 560px){
+    .inputBoxes{
+        grid-template-columns: 66% 26%;
+    }
+    .addBtn{
+        grid-column: 1/3;
+    }
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
