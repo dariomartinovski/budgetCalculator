@@ -1,6 +1,6 @@
 {
-  "homepage": "http://dariomartinovski.github.io/expenseCalculator",
-  "name": "project4-budget-calculator",
+  "homepage": "http://dariomartinovski.github.io/expenseTracker",
+  "name": "project4-expense-tracker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
