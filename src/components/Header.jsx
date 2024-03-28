@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header>
         <h1>
-            Budget calculator
+            Obrok calculator
         </h1>
     </header>
   )

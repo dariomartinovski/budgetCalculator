@@ -14,7 +14,7 @@ export default function OutputLine({item, expense, amount, editItem, deleteItem}
     <div className="line">
         <p>
             <span className="expenseOutput">{expense}</span>
-            <span className="amountOutput">${amount}</span>
+            <span className="amountOutput">{amount} den</span>
         </p>
         <div className="buttons">
             <button onClick={handleEditClick}><img src={editIcon} alt="edit icon"/></button>
