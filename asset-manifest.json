@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/budgetCalculator/static/css/main.d4cc74c8.css",
-    "main.js": "/budgetCalculator/static/js/main.5cf9686f.js",
-    "index.html": "/budgetCalculator/index.html",
-    "static/media/delIcon.svg": "/budgetCalculator/static/media/delIcon.3270f2c93c8c138fa6cc69fbd18f985e.svg",
-    "static/media/editIcon.svg": "/budgetCalculator/static/media/editIcon.5b4bbee2e91b8855115c2a1dabf81f38.svg",
-    "main.d4cc74c8.css.map": "/budgetCalculator/static/css/main.d4cc74c8.css.map",
-    "main.5cf9686f.js.map": "/budgetCalculator/static/js/main.5cf9686f.js.map"
+    "main.css": "/expenseTracker/static/css/main.d4cc74c8.css",
+    "main.js": "/expenseTracker/static/js/main.39f66b2e.js",
+    "index.html": "/expenseTracker/index.html",
+    "static/media/delIcon.svg": "/expenseTracker/static/media/delIcon.3270f2c93c8c138fa6cc69fbd18f985e.svg",
+    "static/media/editIcon.svg": "/expenseTracker/static/media/editIcon.5b4bbee2e91b8855115c2a1dabf81f38.svg",
+    "main.d4cc74c8.css.map": "/expenseTracker/static/css/main.d4cc74c8.css.map",
+    "main.39f66b2e.js.map": "/expenseTracker/static/js/main.39f66b2e.js.map"
   },
   "entrypoints": [
     "static/css/main.d4cc74c8.css",
-    "static/js/main.5cf9686f.js"
+    "static/js/main.39f66b2e.js"
   ]
 }
