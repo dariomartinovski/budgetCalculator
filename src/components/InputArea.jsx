@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function InputArea({input, setInput, buttonText, addClick, filter, setFilter}) {
+export default function InputArea({input, setInput, buttonText, addClick, clearAllClick, addHolidayClick, filter, setFilter}) {
   
   const handleChange = (e) => {
     setInput(prevInput => ({...prevInput,[e.target.name]:e.target.value}));
@@ -26,7 +26,14 @@ export default function InputArea({input, setInput, buttonText, addClick, filter
           <input onChange={handleChange} id="amountInput" name="amount" type="text" value={input.amount} autoComplete="off"/>
       </label>
       <button onClick={handleAddClick} className="addBtn" type='submit'>{buttonText}</button>
-      <div className='filter'>
+
+      <div className='clearAll'>
+        <button onClick={clearAllClick}>Clear all</button>
+      </div>
+      <div className='addHoliday'>
+        <button onClick={addHolidayClick}>Add a holiday</button>
+      </div>
+      {/* <div className='filter'>
         <label htmlFor="filterBox">Filter</label>
         <select onChange={handleFilterClick} id="filterBox">
           <option value="all" defaultValue>All</option>
@@ -34,7 +41,7 @@ export default function InputArea({input, setInput, buttonText, addClick, filter
           <option value="200">&gt; 200</option>
           <option value="300">&gt; 300</option>
         </select>
-        </div>
+        </div> */}
     </form>
   )
 }

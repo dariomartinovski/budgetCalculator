@@ -30,9 +30,9 @@ header>h1{
 }
 .inputBoxes{
     display: grid;
-    grid-template-columns: 61% 21% 10%;
+    grid-template-columns: 6fr 2fr 1fr;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 0.5em;
 }
 label{
     display: flex;
@@ -41,11 +41,10 @@ label{
 input{
     height: 1.5rem;
 }
-.addBtn, .filter select{
+.addBtn, .filter select, .clearAll button, .addHoliday button{
     font-family: 'Roboto Slab', serif;
-    height: 1.8rem;
     align-self: flex-end;
-    padding: 0.1rem;
+    padding: 0.3em 0.7em;
     border: 0.125rem solid white;
     border-radius: 0.5rem;
     color: white;
@@ -56,15 +55,16 @@ input{
     background-color: white;
     color: black;
 }
+.clearAll, .addHoliday{
+    grid-column: 1/-1;
+    justify-self: end;
+}
 .filter{
-    grid-column: 1/5;
+    grid-column: 1/-1;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-}
-.filter select{
-    margin: 0 1.35rem 0 1rem;
-    min-width: 10%;
+    gap: 0.5em;
 }
 .filter select option{
     color: black;
@@ -113,7 +113,11 @@ input{
         grid-template-columns: 66% 26%;
     }
     .addBtn{
-        grid-column: 1/3;
+    /* , .clearAll, .addHoliday{ */
+        grid-column: 1/-1;
     }
+    /* .addHoliday button, .clearAll button{
+        width: 80%;
+    } */
   }
 

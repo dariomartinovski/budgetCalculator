@@ -32,9 +32,6 @@ function App() {
     setTotal(sum);
   },[list, setList, buttonText])
 
-  // useEffect(()=>{
-  // },[list, setList, buttonText])
-
   const addClick = () => {
     if(input.expense==="" || input.amount===""){
       alert("All fields must not be empty");
@@ -96,11 +93,43 @@ function App() {
     }
   }
 
+  const clearAll = () => {
+    const shouldClear = window.confirm('Are you sure you want to clear all expenses?');
+    if(shouldClear){
+      setList([]);
+      setTotal(0);
+    }
+  }
+
+  const addHolidayClick = (e) => {
+    e.preventDefault();
+    if(total + 140 > 840){
+      alert("The sum of products can't be more than 840 den");
+      return;
+    }
+  
+    const existingHolidayItem = list.find(item => item.expense === "Holiday" && item.amount % 140 === 0);
+  
+    if(existingHolidayItem){
+      const updatedList = list.map(item => {
+        if(item.id === existingHolidayItem.id) {
+          return {...item, amount: item.amount + 140};
+        }
+        return item;
+      });
+      setList(updatedList);
+    }
+    else {
+      const newHolidayItem = {id: uuidv4(), expense: "Holiday", amount: 140};
+      setList(prevList => [...prevList, newHolidayItem]);
+    }
+  }
+
   return (
     <>
       <Header/>
       <div className='budgetApp'>
-        <InputArea input={input} setInput={setInput} buttonText={buttonText} addClick={addClick} filter={filter} setFilter={setFilter} selected={editId !== null && editId !== ""}/>
+        <InputArea input={input} setInput={setInput} buttonText={buttonText} clearAllClick={clearAll} addClick={addClick} addHolidayClick={addHolidayClick} filter={filter} setFilter={setFilter} selected={editId !== null && editId !== ""}/>
         <OutputArea list={list} editItem={editItem} deleteItem={deleteItem} filter={filter}/>
         <TotalAmount total={total} setList={setList}/>
       </div>
